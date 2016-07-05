@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
-import { HeroService } from './hero.service';
+import {HeroService} from './hero.service';
 
 @Component({
-    selector: 'my-app',
-    template: `
+  selector: 'my-app',
+  template: `
         <h1>{{title}}</h1>
         <nav>
             <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
@@ -13,10 +13,11 @@ import { HeroService } from './hero.service';
         </nav>    
         <router-outlet></router-outlet> 
     `,
-    directives: [ROUTER_DIRECTIVES],
-    providers: [HeroService]
+  styleUrls: ['app/app.component.css'],
+  directives: [ROUTER_DIRECTIVES],
+  providers: [HeroService]
 })
 export class AppComponent {
-    
-    title = 'Tour of Heroes';
+
+  title = 'Tour of Heroes';
 }
